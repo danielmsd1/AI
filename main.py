@@ -4,6 +4,9 @@
 import tensorflow as tf
 # import label encoder
 from sklearn import preprocessing
+from keras.preprocessing import sequence
+from keras.models import Sequential
+from keras.layers import Dense, Embedding, Conv1D, GlobalMaxPool1D
 
 
 # Get the dataset
@@ -21,11 +24,6 @@ def import_imdb():
 
     tf.keras.datasets.imdb.get_word_index(path="imdb_word_index.json")
 
-
-# creating the labelEncoder
-le = preprocessing.LabelEncoder()
-# convert string labels into numbers
-imdb_encoded = le.fit_transform()
 
 if __name__ == '__main__':
     import_imdb()
