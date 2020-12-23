@@ -1,8 +1,4 @@
-# Using naive bias to predict
-# IMDB movie review sentiment classification dataset
-#
 import tensorflow as tf
-# import label encoder
 from sklearn import preprocessing
 from keras.preprocessing import sequence
 from keras.models import Sequential
